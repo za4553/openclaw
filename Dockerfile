@@ -4,5 +4,6 @@ COPY . /app
 WORKDIR /app
 RUN pnpm install
 RUN pnpm run build
-CMD [ "pnpm", "start", "--", "--yes" ]
+CMD [ "node", "dist/index.js" ]
+
 
