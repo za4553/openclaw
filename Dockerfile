@@ -5,12 +5,12 @@ WORKDIR /app
 RUN pnpm install
 RUN pnpm run build
 
-# Essential environment variables
+# Essential Railway settings
 ENV TTY=0
 ENV CI=true
 ENV NODE_ENV=production
 ENV PORT=3000
 ENV OPENCLAW_STORAGE_TYPE=local
 
-# Start the bot
+# Start the app directly
 CMD [ "node", "dist/index.js" ]
